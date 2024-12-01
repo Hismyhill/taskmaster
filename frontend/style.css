@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200..800;1,200..800&display=swap");
+
+:root {
+  --primary-color: #8672ff;
+  --base-color: #fff;
+  --text-color: #2e2b41;
+  --input-color: #f3f0ff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-family: Poppins, Segoe UI, sans-serif;
+  font-size: 62.5%;
+  color: var(--text-color);
+  text-align: center;
+}
+
+body {
+  background-color: #f3f3f3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: 1.4rem;
+}
+
+.wrapper {
+  min-width: 80%;
+  min-height: 80vh;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5rem;
+}
+
+header h1 {
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+header p {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.container {
+  /* background-color: white; */
+  background-color: var(--base-color);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: max(40%, 40rem);
+}
+
+.container h2 {
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+
+form {
+  width: min(40rem, 100%);
+  margin: 2rem 0 5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+form > div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+form label {
+  flex-shrink: 0;
+  height: 5rem;
+  width: 10rem;
+  background-color: var(--primary-color);
+  color: var(--base-color);
+  border-radius: 8px 0 0 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+form input,
+form select,
+form textarea {
+  box-sizing: border-box;
+  flex-grow: 1;
+  min-width: 0;
+  height: 5rem;
+  padding: 1em;
+  font: inherit;
+  border-radius: 0 8px 8px 0;
+  border: 2px solid var(--input-color);
+  border-left: none;
+  background-color: var(--input-color);
+  transition: 150ms ease;
+}
+
+form input:hover,
+form select:hover,
+form textarea:hover {
+  border-color: var(--primary-color);
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+  outline: none;
+  border-color: var(--text-color);
+}
+
+div:has(input:focus, select:focus, textarea:focus) > label {
+  background-color: var(--text-color);
+}
+
+form input::placeholder {
+  font-size: 1.4rem;
+  color: var(--text-color);
+}
+
+.btn-primary {
+  margin-top: 1rem;
+  border: none;
+  border-radius: none;
+  border-radius: 100rem;
+  padding: 0.85em 4em;
+  color: var(--base-color);
+  background-color: var(--primary-color);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-primary:link,
+.btn-primary:visited {
+  background-color: var(--input-color);
+}
+
+.btn-primary:hover {
+  background-color: var(--text-color);
+}
+
+.btn-text {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+.btn-text:hover {
+  text-decoration: underline;
+}
+
+/* helper classes */
+.hidden {
+  opacity: 0;
+}
+
+form div.incorrect label {
+  background-color: #dc3545;
+}
+
+form div.incorrect input {
+  border-color: #dc3545;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  margin: 5px 0;
+  background-color: #f8f9fa;
+  border: 1px solid var(--primary-color);
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+li div {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+
+li.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+
+li button {
+  border: none;
+  border-radius: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  color: var(--base-color);
+  margin-top: 5px;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+li button:first-child {
+  background-color: var(--primary-color);
+  margin-right: 1rem;
+}
+li button:last-child {
+  background-color: #dc3545;
+}
+
+li button:first-child:hover {
+  background-color: var(--text-color);
+}
+
+li button:last-child:hover {
+  background-color: #c82333;
+}
+
+li span,
+.links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.foot {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--primary-color);
+  color: var(--base-color);
+  text-align: center;
+  padding: 10px;
+}

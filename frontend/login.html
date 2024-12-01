@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TaskMaster - Login</title>
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"
+    /> -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>TaskMaster</h1>
+        <p>Your ultimate task management tool!</p>
+      </header>
+      <main class="container">
+        <section>
+          <h2>Welcome back, login to use TaskMaster</h2>
+
+          <form id="loginForm">
+            <div>
+              <label for="email">Email</label>
+              <input type="text" id="email" required />
+            </div>
+
+            <div>
+              <label for="password">Password</label>
+              <input type="password" id="password" required />
+            </div>
+
+            <button class="btn-primary" type="submit">Login</button>
+          </form>
+          <p>
+            Don't have an account?
+            <a class="btn-text" href="index.html">Register here</a>
+          </p>
+        </section>
+      </main>
+
+      <footer class="foot">
+        <small>&copy; 2024 TaskMaster. All Rights Reserved.</small>
+      </footer>
+    </div>
+
+    <script src="script.js" defer></script>
+    <script src="validation.js" defer></script>
+  </body>
+</html>
